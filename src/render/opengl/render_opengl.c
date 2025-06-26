@@ -350,6 +350,7 @@ r_window_begin_frame(OS_Handle os, R_Handle r)
   Vec2F32 client_rect_dim = dim_2f32(client_rect);
   
   //- rjf: clear and reset state
+  glDrawBuffer(GL_BACK);
   glClearColor(0, 0, 0, 0);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glViewport(0, 0, (S32)client_rect_dim.x, (S32)client_rect_dim.y);
